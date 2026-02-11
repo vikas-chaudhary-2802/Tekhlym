@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+This website is designed to establish credibility, communicate vision, and showcase Tekhlym’s ventures in a clean and professional digital presence.
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌐 About Tekhlym
 
-## How can I edit this code?
+Tekhlym is a vision-driven parent company focused on building technology-led education ventures for India and global learners.
 
-There are several ways of editing your application.
+The organization operates with a long-term belief in:
 
-**Use Lovable**
+- Skill-first learning
+- AI-led education systems
+- Outcome-driven platforms
+- Scalable education infrastructure
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+The website reflects this philosophy through calm design, structured storytelling, and premium visual experience.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🎯 Objective of This Website
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This is an **informational corporate website** built to:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Establish brand credibility
+- Communicate Tekhlym’s vision and mission
+- Showcase ventures and products
+- Enable partner & institutional outreach
+- Support hiring & ecosystem visibility
 
-Follow these steps:
+This is **not** a product dashboard or SaaS platform.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧱 Website Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 1. Home
+- Hero value proposition
+- Tekhlym introduction
+- Venture highlights
+- Vision & philosophy
+- Footer with contact details
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 2. About
+- Company overview
+- Vision & mission
+- Why Tekhlym exists
+- Long-term focus areas
 
-**Edit a file directly in GitHub**
+### 3. Ventures / Products
+Showcases Tekhlym’s ecosystem:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Edunachal — Competitive exam platform
+- GradeEase — AI answer sheet grading system
+- Future ventures pipeline
 
-**Use GitHub Codespaces**
+Each venture includes:
+- Description
+- Status
+- Strategic positioning
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 4. Careers (Optional Section)
+- Culture & work philosophy
+- Hiring intent
+- Builder mindset positioning
 
-## What technologies are used for this project?
+### 5. Contact
+- Official contact number
+- Email communication
+- Location context
+- Inquiry pathway
 
-This project is built with:
+---
 
+## 🎨 Design Philosophy
+
+The design follows a **“Quiet Premium”** approach.
+
+### Core Principles
+- Minimal layout
+- Calm spacing
+- Clean typography
+- Trust-building visuals
+- Founder-led tone
+
+### UI Characteristics
+- Light premium backgrounds
+- Subtle gradients
+- Soft section transitions
+- Controlled animations
+- Card-based venture display
+
+The goal is to feel:
+
+> Serious. Visionary. Long-term.
+
+---
+
+## 🧑‍💻 Tech Stack
+
+This is a frontend-only implementation.
+
+- React
 - Vite
 - TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- shadcn/ui
 
-## How can I deploy this project?
+No backend, database, or API integrations are included.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The structure is kept modular for future scalability.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## ⚙️ Local Development Setup
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To run the project locally:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+# Clone the repository
+git clone <YOUR_REPO_URL>
+
+# Navigate into the folder
+cd <PROJECT_FOLDER>
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
