@@ -52,7 +52,7 @@ const Index = () => {
             </motion.div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-foreground">
-              Powering Education,{" "}
+              Powering Education{" "}
               <span className="text-gradient">Innovation</span>
               <br className="hidden md:block" />
               {" "}and Youth Potential
