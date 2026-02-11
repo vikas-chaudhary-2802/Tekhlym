@@ -117,10 +117,10 @@ To run the project locally:
 
 ```bash
 # Clone the repository
-git clone <YOUR_REPO_URL>
+git clone <https://github.com/vikas-chaudhary-2802/Tekhlym.git>
 
 # Navigate into the folder
-cd <PROJECT_FOLDER>
+cd <Project Folder>
 
 # Install dependencies
 npm install
