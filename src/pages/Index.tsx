@@ -13,10 +13,10 @@ const focusAreas = [
 ];
 
 const stats = [
-  { value: "5+", label: "Active Initiatives" },
-  { value: "10K+", label: "Learners Impacted" },
-  { value: "3+", label: "States Reached" },
-  { value: "2024", label: "Founded" },
+  { value: "30+", label: "Active Initiatives" },
+  { value: "500K+", label: "Learners Impacted" },
+  { value: "20+", label: "States Reached" },
+  { value: "2020", label: "Founded" },
 ];
 
 const Index = () => {

@@ -50,7 +50,7 @@ const Contact = () => {
                   {[
                     { icon: Phone, label: "Phone", value: "+91 76289 28150", href: "tel:+917628928150" },
                     { icon: Mail, label: "Email", value: "info@tekhlym.com", href: "mailto:info@tekhlym.com" },
-                    { icon: MapPin, label: "Location", value: "India", href: undefined },
+                    { icon: MapPin, label: "Location", value: "Delhi,India", href: undefined },
                   ].map((item) => (
                     <div key={item.label} className="glass-card rounded-xl p-4 flex items-center gap-4">
                       <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
