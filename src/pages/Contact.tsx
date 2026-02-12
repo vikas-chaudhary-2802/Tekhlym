@@ -1,16 +1,42 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import SectionReveal from "@/components/SectionReveal";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+  
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+  
+    formData.append("access_key", "12c00f4e-73d9-496b-9ee7-ac9a822729fc");
+  
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        console.log(result);
+        alert("Submission failed. Check access key.");
+      }
+  
+    } catch (error) {
+      console.error(error);
+      alert("Error submitting form.");
+    }
   };
+  
 
   return (
     <PageLayout>
@@ -73,6 +99,7 @@ const Contact = () => {
             </SectionReveal>
 
             {/* Form */}
+            <input type="hidden" name="subject" value="New Tekhlym Contact Submission" />
             <SectionReveal direction="right" delay={0.15}>
               <div className="glass-card rounded-2xl p-8">
                 {submitted ? (
@@ -89,15 +116,17 @@ const Contact = () => {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    {[
-                      { label: "Name", type: "text", placeholder: "Your name", required: true },
-                      { label: "Email", type: "email", placeholder: "you@example.com", required: true },
-                      { label: "Organization", type: "text", placeholder: "Your organization (optional)", required: false },
-                    ].map((field) => (
+                {[
+                  { label: "Name", type: "text", name: "name", placeholder: "Your name", required: true },
+                  { label: "Email", type: "email", name: "email", placeholder: "you@example.com", required: true },
+                  { label: "Organization", type: "text", name: "organization", placeholder: "Your organization (optional)", required: false },
+                ].map((field) => (
+
                       <div key={field.label}>
                         <label className="text-sm font-medium text-foreground mb-1.5 block">{field.label}</label>
                         <input
                           type={field.type}
+                          name={field.name}
                           required={field.required}
                           className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all backdrop-blur-sm"
                           placeholder={field.placeholder}
@@ -107,6 +136,7 @@ const Contact = () => {
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
                       <textarea
+                        name="message"
                         required
                         rows={4}
                         className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none backdrop-blur-sm"
